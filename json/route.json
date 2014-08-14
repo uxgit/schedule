@@ -1,0 +1,12 @@
+{
+    "dashboard": {
+        "url": "/dashboard",
+        "templateUrl": "views/dashboard.html"
+    },
+
+    "services": {
+        "url": "/services",
+        "templateUrl": "views/services.html"
+    }
+
+}

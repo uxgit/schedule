@@ -1,22 +1,15 @@
 'use strict'
 
-angular.module('App', ['ui.router', 'Routing'])
+angular.module('App', ['ui.router', 'Routing', 'Controllers'])
 
     .config(function ($stateProvider, $urlRouterProvider, routerProvider) {
         $stateProvider
-            .state('home', {
-                url: '/home',
-                templateUrl: 'templates/home.html'
+            .state('dashboard', {
+                url: '/dashboard',
+                templateUrl: 'views/dashboard.html'
             });
 
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/dashboard');
 
-        routerProvider.setCollectionUrl('js/routeCollection.json');
-    })
-
-    .controller('MainController', function ($scope, router) {
-        $scope.reload = function() {
-            router.setUpRoutes();
-        };
-    })
-;
+        routerProvider.setCollectionUrl('json/route.json');
+    });
